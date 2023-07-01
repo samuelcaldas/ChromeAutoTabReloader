@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Auto Tab Reloader",
+  "version": "1.0",
+  "description": "Automatically reloads tabs at a specified interval",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "action": {
+    "default_popup": "src/popup.html",
+    "default_icon": {
+      "128": "icons/icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "src/background.js"
+  }
+}
