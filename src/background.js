@@ -31,3 +31,20 @@ class TabManager {
     }
   });
   
+  chrome.tabs.onActivated.addListener((activeInfo) => {
+    // Update the timer for the newly activated tab
+    chrome.storage.sync.get(activeInfo.tabId.toString(), (items) => {
+      const interval = items[activeInfo.tabId] || 0;
+      tabManager.setTimer(activeInfo.tabId, interval);
+    });
+  });
+  
+  chrome.storage.onChanged.addListener((changes, areaName) => {
+    if (areaName === 'sync') {
+      Object.keys(changes).forEach((tabId) => {
+        const interval = changes[tabId].newValue;
+        tabManager.setTimer(parseInt(tabId, 10), interval);
+      });
+    }
+  });
+  
