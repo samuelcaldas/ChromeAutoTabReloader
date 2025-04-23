@@ -1,11 +1,52 @@
 body {
-    width: 200px;
-    padding: 10px;
-  }
-  label {
-    display: block;
-    margin-bottom: 10px;
-  }
-  input[type="number"] {
-    width: 50px;
-  }
+  font-family: sans-serif;
+  width: 250px; /* Adjust as needed */
+  padding: 10px;
+}
+
+h3 {
+  margin-top: 0;
+  text-align: center;
+  color: #333;
+}
+
+.input-group {
+  margin-bottom: 10px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 3px;
+  font-size: 0.9em;
+}
+
+.input-group input[type="number"] {
+  width: calc(100% - 10px); /* Account for padding */
+  padding: 5px;
+  box-sizing: border-box; /* Include padding in width */
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 8px 12px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: #f0f0f0;
+}
+
+button:hover {
+  background-color: #e0e0e0;
+}
+
+#status {
+  margin-top: 10px;
+  font-size: 0.9em;
+  min-height: 1.2em; /* Prevent layout shift */
+  text-align: center;
+}

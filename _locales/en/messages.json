@@ -1,0 +1,58 @@
+{
+    "extensionName": {
+      "message": "Auto Tab Reloader",
+      "description": "Name of the extension"
+    },
+    "extensionDescription": {
+      "message": "Automatically reloads tabs at a specified interval.",
+      "description": "Short description of the extension's purpose"
+    },
+    "reloadEveryLabel": {
+      "message": "Reload every (minutes):",
+      "description": "Label for the interval input field"
+    },
+    "setTimerButton": {
+      "message": "Set Timer",
+      "description": "Button text for setting the reload timer"
+    },
+    "clearTimerButton": {
+      "message": "Clear Timer",
+      "description": "Button text for clearing the reload timer"
+    },
+    "currentIntervalStatus": {
+      "message": "Current interval: {interval} minutes.",
+      "description": "Status message showing the current set interval"
+    },
+    "noActiveTimerStatus": {
+      "message": "No active timer for this tab.",
+      "description": "Status message shown when no timer is active"
+    },
+    "timerSetStatus": {
+      "message": "Timer set to {interval} minutes.",
+      "description": "Status message confirming the timer was set"
+    },
+    "timerClearedStatus": {
+      "message": "Timer cleared successfully.",
+      "description": "Status message confirming the timer was cleared"
+    },
+    "cannotSetOnPage": {
+      "message": "Cannot set timer for this type of page.",
+      "description": "Error shown when trying to set timer on restricted pages"
+    },
+    "errorGettingTab": {
+      "message": "Could not get current tab.",
+      "description": "Error shown when tab info cannot be retrieved"
+    },
+    "errorGettingTimer": {
+      "message": "Failed to get timer status.",
+      "description": "Generic error for getting timer"
+    },
+    "errorSettingTimer": {
+      "message": "Failed to set timer.",
+      "description": "Generic error for setting timer"
+    },
+    "invalidInterval": {
+      "message": "Please enter a valid positive number for minutes.",
+      "description": "Error for invalid interval input"
+    }
+  }

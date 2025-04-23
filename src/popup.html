@@ -1,13 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="styles.css">
+    <title>Auto Tab Reloader</title>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
 </head>
 <body>
-    <label for="interval">Reload interval (minutes):</label>
-    <input type="number" id="interval" min="0" value="0" />
-    <button id="save">Save</button>
+    <h3>Auto Tab Reloader</h3>
+    <div class="input-group">
+        <label for="interval">Reload every (minutes):</label>
+        <input type="number" id="interval" min="1" placeholder="e.g., 5">
+    </div>
+    <div class="button-group">
+        <button id="set">Set Timer</button>
+        <button id="clear">Clear Timer</button>
+    </div>
+    <div id="status"></div>
     <script src="popup.js"></script>
 </body>
 </html>

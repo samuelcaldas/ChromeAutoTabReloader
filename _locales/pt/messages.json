@@ -1,0 +1,58 @@
+{
+    "extensionName": {
+      "message": "Recarregador Automático de Abas",
+      "description": "Nome da extensão"
+    },
+    "extensionDescription": {
+      "message": "Recarrega automaticamente as abas em um intervalo especificado.",
+      "description": "Descrição curta sobre o propósito da extensão"
+    },
+    "reloadEveryLabel": {
+      "message": "Recarregar a cada (minutos):",
+      "description": "Rótulo do campo de entrada de intervalo"
+    },
+    "setTimerButton": {
+      "message": "Configurar Temporizador",
+      "description": "Texto do botão para configurar o temporizador"
+    },
+    "clearTimerButton": {
+      "message": "Limpar Temporizador",
+      "description": "Texto do botão para limpar o temporizador"
+    },
+    "currentIntervalStatus": {
+      "message": "Intervalo atual: {interval} minutos.",
+      "description": "Mensagem de status mostrando o intervalo atual definido"
+    },
+    "noActiveTimerStatus": {
+      "message": "Nenhum temporizador ativo para esta aba.",
+      "description": "Mensagem de status quando não há temporizador ativo"
+    },
+    "timerSetStatus": {
+      "message": "Temporizador configurado para {interval} minutos.",
+      "description": "Mensagem de status confirmando o temporizador configurado"
+    },
+    "timerClearedStatus": {
+      "message": "Temporizador limpo com sucesso.",
+      "description": "Mensagem de status confirmando que o temporizador foi limpo"
+    },
+    "cannotSetOnPage": {
+      "message": "Não é possível configurar o temporizador para este tipo de página.",
+      "description": "Erro ao tentar configurar temporizador em páginas restritas"
+    },
+    "errorGettingTab": {
+      "message": "Não foi possível obter a aba atual.",
+      "description": "Erro ao obter informações da aba"
+    },
+    "errorGettingTimer": {
+      "message": "Falha ao obter o status do temporizador.",
+      "description": "Erro genérico ao buscar temporizador"
+    },
+    "errorSettingTimer": {
+      "message": "Falha ao configurar o temporizador.",
+      "description": "Erro genérico ao configurar temporizador"
+    },
+    "invalidInterval": {
+      "message": "Por favor, insira um número positivo válido de minutos.",
+      "description": "Erro para entrada de intervalo inválida"
+    }
+  }
