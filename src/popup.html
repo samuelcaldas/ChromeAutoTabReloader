@@ -1,21 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
     <title>Auto Tab Reloader</title>
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <h3>Auto Tab Reloader</h3>
-    <div class="input-group">
-        <label for="interval">Reload every (minutes):</label>
-        <input type="number" id="interval" min="1" placeholder="e.g., 5">
+    <!-- Header -->
+    <div class="header">
+        <div class="header-icon">🔄</div>
+        <h1 data-i18n="extensionName">Auto Tab Reloader</h1>
     </div>
-    <div class="button-group">
-        <button id="set">Set Timer</button>
-        <button id="clear">Clear Timer</button>
+
+    <!-- Current Tab Section -->
+    <div class="section" id="current-tab-section">
+        <div class="section-label" data-i18n="reloadEveryLabel">Reload every (minutes):</div>
+        <div class="input-row">
+            <input type="number" id="interval" min="1" step="1" data-i18n-placeholder="intervalPlaceholder"
+                placeholder="e.g., 5">
+            <button id="set" class="btn btn-primary" data-i18n="setTimerButton">Set Timer</button>
+            <button id="clear" class="btn btn-secondary" data-i18n="clearTimerButton">Clear</button>
+        </div>
+        <div id="status" class="status"></div>
     </div>
-    <div id="status"></div>
-    <script src="popup.js"></script>
+
+    <!-- Active Timers Section -->
+    <div class="section" id="timers-section">
+        <div class="section-header">
+            <span class="section-label" data-i18n="activeTimersHeader">Active Timers</span>
+            <button id="clear-all" class="btn btn-small btn-danger" data-i18n="clearAllButton">Clear All</button>
+        </div>
+        <div id="timer-list" class="timer-list">
+            <div class="timer-empty" data-i18n="noActiveTimers">No active timers</div>
+        </div>
+    </div>
+
+    <!-- Footer Actions -->
+    <div class="footer">
+        <button id="export-btn" class="btn btn-ghost" data-i18n-title="exportTitle" title="Export settings">
+            📤 <span data-i18n="exportButton">Export</span>
+        </button>
+        <button id="import-btn" class="btn btn-ghost" data-i18n-title="importTitle" title="Import settings">
+            📥 <span data-i18n="importButton">Import</span>
+        </button>
+        <button id="options-btn" class="btn btn-ghost" data-i18n-title="optionsTitle" title="Options">
+            ⚙️ <span data-i18n="optionsButton">Options</span>
+        </button>
+    </div>
+
+    <!-- Hidden file input for import -->
+    <input type="file" id="import-file" accept=".json" style="display: none;">
+
+    <script src="popup.js" type="module"></script>
 </body>
+
 </html>

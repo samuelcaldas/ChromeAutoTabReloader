@@ -1,0 +1,25 @@
+{
+  "name": "chromeautotabreloader",
+  "version": "2.0.0",
+  "description": "Auto Tab Reloader is a Chrome extension that automatically reloads tabs at a specified interval.",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samuelcaldas/ChromeAutoTabReloader.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/samuelcaldas/ChromeAutoTabReloader/issues"
+  },
+  "homepage": "https://github.com/samuelcaldas/ChromeAutoTabReloader#readme",
+  "devDependencies": {
+    "vitest": "^4.0.18"
+  }
+}

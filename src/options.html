@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Auto Tab Reloader — Options</title>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0f1023;
+            color: #e0e0e8;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 480px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .header h1 {
+            font-size: 22px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #11998e, #38ef7d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 4px;
+        }
+
+        .header p {
+            font-size: 13px;
+            color: #6b6c85;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 16px;
+        }
+
+        .card-title {
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: #8b8ca7;
+            margin-bottom: 16px;
+        }
+
+        .option-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+        }
+
+        .option-row:last-child {
+            border-bottom: none;
+        }
+
+        .option-label {
+            font-size: 13.5px;
+            font-weight: 500;
+        }
+
+        .option-desc {
+            font-size: 11.5px;
+            color: #6b6c85;
+            margin-top: 2px;
+        }
+
+        input[type="number"] {
+            width: 70px;
+            padding: 6px 10px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.06);
+            color: #e0e0e8;
+            font-family: inherit;
+            font-size: 13px;
+            font-weight: 500;
+            text-align: center;
+            outline: none;
+            transition: border-color 0.2s;
+            -moz-appearance: textfield;
+        }
+
+        input[type="number"]::-webkit-outer-spin-button,
+        input[type="number"]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+        }
+
+        input[type="number"]:focus {
+            border-color: #11998e;
+            box-shadow: 0 0 0 3px rgba(17, 153, 142, 0.2);
+        }
+
+        /* Toggle switch */
+        .toggle {
+            position: relative;
+            width: 44px;
+            height: 24px;
+        }
+
+        .toggle input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .toggle-slider {
+            position: absolute;
+            cursor: pointer;
+            inset: 0;
+            background: rgba(255, 255, 255, 0.12);
+            border-radius: 24px;
+            transition: background 0.3s;
+        }
+
+        .toggle-slider::before {
+            content: '';
+            position: absolute;
+            height: 18px;
+            width: 18px;
+            left: 3px;
+            bottom: 3px;
+            background: #e0e0e8;
+            border-radius: 50%;
+            transition: transform 0.3s;
+        }
+
+        .toggle input:checked+.toggle-slider {
+            background: linear-gradient(135deg, #11998e, #38ef7d);
+        }
+
+        .toggle input:checked+.toggle-slider::before {
+            transform: translateX(20px);
+        }
+
+        .btn-save {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #11998e, #38ef7d);
+            color: #0a0a0a;
+            font-family: inherit;
+            font-size: 14px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn-save:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 16px rgba(17, 153, 142, 0.4);
+        }
+
+        .btn-save:active {
+            transform: translateY(0);
+        }
+
+        .status {
+            text-align: center;
+            margin-top: 12px;
+            font-size: 12.5px;
+            min-height: 18px;
+            color: #38ef7d;
+            transition: opacity 0.3s;
+        }
+
+        .status--error {
+            color: #eb5757;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔄 Auto Tab Reloader</h1>
+            <p data-i18n="optionsPageSubtitle">Extension Settings</p>
+        </div>
+
+        <div class="card">
+            <div class="card-title" data-i18n="generalSettingsTitle">General</div>
+
+            <div class="option-row">
+                <div>
+                    <div class="option-label" data-i18n="defaultIntervalLabel">Default Interval</div>
+                    <div class="option-desc" data-i18n="defaultIntervalDesc">Pre-filled interval when opening the popup
+                        (minutes)</div>
+                </div>
+                <input type="number" id="default-interval" min="1" step="1" value="5">
+            </div>
+
+            <div class="option-row">
+                <div>
+                    <div class="option-label" data-i18n="bypassCacheLabel">Bypass Cache</div>
+                    <div class="option-desc" data-i18n="bypassCacheDesc">Force a full reload ignoring cached resources
+                    </div>
+                </div>
+                <label class="toggle">
+                    <input type="checkbox" id="bypass-cache" checked>
+                    <span class="toggle-slider"></span>
+                </label>
+            </div>
+
+            <div class="option-row">
+                <div>
+                    <div class="option-label" data-i18n="showBadgeLabel">Show Badge</div>
+                    <div class="option-desc" data-i18n="showBadgeDesc">Display active timer count on the extension icon
+                    </div>
+                </div>
+                <label class="toggle">
+                    <input type="checkbox" id="show-badge" checked>
+                    <span class="toggle-slider"></span>
+                </label>
+            </div>
+        </div>
+
+        <button id="save-btn" class="btn-save" data-i18n="saveOptionsButton">Save Options</button>
+        <div id="status" class="status"></div>
+    </div>
+
+    <script src="options.js" type="module"></script>
+</body>
+
+</html>

@@ -1,58 +1,134 @@
 {
-    "extensionName": {
-      "message": "Recarregador Automático de Abas",
-      "description": "Nome da extensão"
-    },
-    "extensionDescription": {
-      "message": "Recarrega automaticamente as abas em um intervalo especificado.",
-      "description": "Descrição curta sobre o propósito da extensão"
-    },
-    "reloadEveryLabel": {
-      "message": "Recarregar a cada (minutos):",
-      "description": "Rótulo do campo de entrada de intervalo"
-    },
-    "setTimerButton": {
-      "message": "Configurar Temporizador",
-      "description": "Texto do botão para configurar o temporizador"
-    },
-    "clearTimerButton": {
-      "message": "Limpar Temporizador",
-      "description": "Texto do botão para limpar o temporizador"
-    },
-    "currentIntervalStatus": {
-      "message": "Intervalo atual: {interval} minutos.",
-      "description": "Mensagem de status mostrando o intervalo atual definido"
-    },
-    "noActiveTimerStatus": {
-      "message": "Nenhum temporizador ativo para esta aba.",
-      "description": "Mensagem de status quando não há temporizador ativo"
-    },
-    "timerSetStatus": {
-      "message": "Temporizador configurado para {interval} minutos.",
-      "description": "Mensagem de status confirmando o temporizador configurado"
-    },
-    "timerClearedStatus": {
-      "message": "Temporizador limpo com sucesso.",
-      "description": "Mensagem de status confirmando que o temporizador foi limpo"
-    },
-    "cannotSetOnPage": {
-      "message": "Não é possível configurar o temporizador para este tipo de página.",
-      "description": "Erro ao tentar configurar temporizador em páginas restritas"
-    },
-    "errorGettingTab": {
-      "message": "Não foi possível obter a aba atual.",
-      "description": "Erro ao obter informações da aba"
-    },
-    "errorGettingTimer": {
-      "message": "Falha ao obter o status do temporizador.",
-      "description": "Erro genérico ao buscar temporizador"
-    },
-    "errorSettingTimer": {
-      "message": "Falha ao configurar o temporizador.",
-      "description": "Erro genérico ao configurar temporizador"
-    },
-    "invalidInterval": {
-      "message": "Por favor, insira um número positivo válido de minutos.",
-      "description": "Erro para entrada de intervalo inválida"
-    }
+  "extensionName": {
+    "message": "Recarregador Automático de Abas",
+    "description": "Nome da extensão"
+  },
+  "extensionDescription": {
+    "message": "Recarrega automaticamente as abas em um intervalo especificado.",
+    "description": "Descrição curta sobre o propósito da extensão"
+  },
+  "reloadEveryLabel": {
+    "message": "Recarregar a cada (minutos):",
+    "description": "Rótulo do campo de entrada de intervalo"
+  },
+  "intervalPlaceholder": {
+    "message": "ex.: 5",
+    "description": "Texto de espaço reservado para o campo de intervalo"
+  },
+  "setTimerButton": {
+    "message": "Configurar",
+    "description": "Texto do botão para configurar o temporizador"
+  },
+  "clearTimerButton": {
+    "message": "Limpar",
+    "description": "Texto do botão para limpar o temporizador"
+  },
+  "currentIntervalStatus": {
+    "message": "Intervalo atual: {interval} minutos.",
+    "description": "Mensagem de status mostrando o intervalo atual definido"
+  },
+  "noActiveTimerStatus": {
+    "message": "Nenhum temporizador ativo para esta aba.",
+    "description": "Mensagem de status quando não há temporizador ativo"
+  },
+  "timerSetStatus": {
+    "message": "Temporizador configurado para {interval} minutos.",
+    "description": "Mensagem de status confirmando o temporizador configurado"
+  },
+  "timerClearedStatus": {
+    "message": "Temporizador limpo com sucesso.",
+    "description": "Mensagem de status confirmando que o temporizador foi limpo"
+  },
+  "cannotSetOnPage": {
+    "message": "Não é possível configurar o temporizador para este tipo de página.",
+    "description": "Erro ao tentar configurar temporizador em páginas restritas"
+  },
+  "errorGettingTab": {
+    "message": "Não foi possível obter a aba atual.",
+    "description": "Erro ao obter informações da aba"
+  },
+  "errorGettingTimer": {
+    "message": "Falha ao obter o status do temporizador.",
+    "description": "Erro genérico ao buscar temporizador"
+  },
+  "errorSettingTimer": {
+    "message": "Falha ao configurar o temporizador.",
+    "description": "Erro genérico ao configurar temporizador"
+  },
+  "invalidInterval": {
+    "message": "Por favor, insira um número positivo válido de minutos.",
+    "description": "Erro para entrada de intervalo inválida"
+  },
+  "activeTimersHeader": {
+    "message": "Temporizadores Ativos",
+    "description": "Cabeçalho da seção de temporizadores ativos"
+  },
+  "noActiveTimers": {
+    "message": "Nenhum temporizador ativo",
+    "description": "Mensagem quando não há temporizadores ativos"
+  },
+  "clearAllButton": {
+    "message": "Limpar Todos",
+    "description": "Texto do botão para limpar todos os temporizadores"
+  },
+  "exportButton": {
+    "message": "Exportar",
+    "description": "Texto do botão para exportar configurações"
+  },
+  "importButton": {
+    "message": "Importar",
+    "description": "Texto do botão para importar configurações"
+  },
+  "optionsButton": {
+    "message": "Opções",
+    "description": "Texto do botão para abrir a página de opções"
+  },
+  "exportTitle": {
+    "message": "Exportar configurações como arquivo JSON",
+    "description": "Dica do botão de exportar"
+  },
+  "importTitle": {
+    "message": "Importar configurações de arquivo JSON",
+    "description": "Dica do botão de importar"
+  },
+  "optionsTitle": {
+    "message": "Abrir opções da extensão",
+    "description": "Dica do botão de opções"
+  },
+  "optionsPageSubtitle": {
+    "message": "Configurações da Extensão",
+    "description": "Subtítulo da página de opções"
+  },
+  "generalSettingsTitle": {
+    "message": "Geral",
+    "description": "Título da seção de configurações gerais"
+  },
+  "defaultIntervalLabel": {
+    "message": "Intervalo Padrão",
+    "description": "Rótulo da configuração de intervalo padrão"
+  },
+  "defaultIntervalDesc": {
+    "message": "Intervalo pré-preenchido ao abrir o popup (minutos)",
+    "description": "Descrição da configuração de intervalo padrão"
+  },
+  "bypassCacheLabel": {
+    "message": "Ignorar Cache",
+    "description": "Rótulo da configuração de ignorar cache"
+  },
+  "bypassCacheDesc": {
+    "message": "Forçar recarregamento completo ignorando recursos em cache",
+    "description": "Descrição da configuração de ignorar cache"
+  },
+  "showBadgeLabel": {
+    "message": "Mostrar Indicador",
+    "description": "Rótulo da configuração de indicador"
+  },
+  "showBadgeDesc": {
+    "message": "Exibir contagem de temporizadores ativos no ícone da extensão",
+    "description": "Descrição da configuração de indicador"
+  },
+  "saveOptionsButton": {
+    "message": "Salvar Opções",
+    "description": "Texto do botão para salvar opções"
   }
+}
